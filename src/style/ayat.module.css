@@ -1,0 +1,402 @@
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amiri/v17/J7aRnpd8CGxBHpUrtLMA7w.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  }
+
+/* ----- Ayatku Section ----- */
+.ayatku {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: #FFF8DB;
+}
+
+
+/* ----- Header ----- */
+.ayatku .headerAyat {
+    width: 100%;
+    height: 80px;
+    background-color: #3D1D00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.ayatku .headerAyat .logoAyat {
+    position: absolute;
+    z-index: 15;
+    left: 20px;
+    margin-top: 5px;
+}
+
+.ayatku .headerAyat .logoAyat img {
+    width: 70px;
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+
+.ayatku .headerAyat .headerContent {
+    width: 30%;
+    height: 60px;
+    background-color: #FFDC8A;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.ayatku .btnBack {
+    position: absolute;
+    z-index: 99;
+    right: 20px;
+}
+
+.ayatku .btnBack button {
+    padding: 5px 20px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid #C89726;
+    transition: .5s;
+}
+.ayatku .btnBack button:hover {
+    transform: scale(1.05);
+    background-color: #FFDC8A;
+    color: #3D1D00;
+}
+.ayatku .btnBack button:hover .backLink {
+    color: #3D1D00;
+}
+.ayatku .btnBack .backLink {
+    color: #C89726;
+    text-decoration: none;
+    transition: .5s;
+}
+.ayatku .btnBack .back2 {
+    display: none;
+}
+
+
+/* ----- Content Ayat ----- */
+.ayatku .contentAyat {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: -80px;
+    padding-top: 80px;
+    z-index: 2;
+}
+
+.ayatku .contentAyat .headerSubAyat {
+    margin-top: 20px;
+    width: 100%;
+}
+.ayatku .contentAyat .headerSubAyat .headerSubContent{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.ayatku .contentAyat .headerKota,
+.ayatku .contentAyat .headerJuz{
+    color: #C89726;
+    text-align: center;
+    width: 100%;
+    padding-top: 2px;
+    background-color: #3D1D00;
+}
+.ayatku .contentAyat .headerKota{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.ayatku .contentAyat .headerJuz{ 
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.ayatku .contentAyat .headerArab {
+    background-color: #FFDC8A;
+    padding: 5px 30px;
+    position: relative;
+    color: #3D1D00;
+    box-shadow: 0px 0px 10px #C89726;
+    border-radius: 10px;
+    font-family: "Amiri","Traditional Arabic",Tahoma,sans-serif;
+    text-align: right;
+}
+
+.ayatku .contentAyat .subAyat{ 
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+.ayatku .contentAyat .subAyat::-webkit-scrollbar{ 
+    width: 0px;
+}
+
+.ayatku .contentAyat .subAyat .spaceContent {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.ayatku .contentAyat .subAyat .mainContent{
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #3D1D00;
+    margin-bottom: 20px;
+    padding: 0px 20px 20px 20px;
+} 
+
+.mainContent .contentTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mainContent .contentTop .contentNo {
+    padding-top: 10px;
+}
+.mainContent .contentTop .contentArab {
+    padding-left: 50px;
+    text-align: right;
+    font-family: "Amiri","Traditional Arabic",Tahoma,sans-serif;
+    font-weight: normal;
+    direction: rtl;
+}
+.mainContent .contentTop .contentArab h2 {
+    line-height: 70px;
+}
+
+
+/* ----- Footer ----- */
+.footerAyat {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #3D1D00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(200, 151, 38, 0.7);
+    padding: 0px 20px;
+}
+.footerAyat p {
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 17px;
+}
+.footerAyat .copyright {
+    font-size: 17px;
+    font-weight: 600;
+    color: #C89726;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.footerAyat a {
+    font-weight: 600;
+    color: #C89726;
+}
+.footerAyat a:hover {
+    color: #FFF8DB;
+}
+
+
+/* ----- Audio ----- */
+audio {
+    border: 2px solid #3D1D00;
+    border-radius: 50px;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #FFF8DB;
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button{
+    background-color: #FFDC8A;
+    border-radius: 50%;
+    transition: .5s;
+}
+audio::-webkit-media-controls-play-button:hover {
+    transform: scale(1.03);
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #3D1D00;
+}
+
+
+/* ----- Loading ----- */
+.ayatku .loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #3D1D00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ayatku .loading .loadingContent {
+    width: 300px;
+    height: auto;
+    text-align: center;
+}
+.ayatku .loading .loadingContent img {
+    width: 100%;
+    animation: imgOpacity 1.5s linear alternate infinite;
+}
+@keyframes imgOpacity {
+    0% {opacity: .4;}
+    100% {opacity: 1;}
+}
+.ayatku .loading .loadingContent h4 {
+    color: #FFF8DB;
+    letter-spacing: .5px;
+}
+.ayatku .loading .loadingContent h4 span {
+    position: relative;
+}
+.ayatku .loading .loadingContent h4 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3D1D00;
+    animation: typing 1.5s steps(4) infinite;
+}
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin-left: 5px;
+    }
+}
+
+
+
+/* ---------- Tablet ---------- */
+
+@media only screen and (max-width: 900px) {  
+    .ayatku .headerAyat .logoAyat {
+        position: absolute;
+        z-index: 15;
+        left: 20px;
+        margin-top: 5px;
+    }
+    .ayatku .headerAyat .logoAyat img {
+        width: 70px;
+    }
+
+    .ayatku .headerAyat .headerContent {
+        width: 50%;
+    }
+
+    .ayatku .btnBack {
+        margin-top: 0px;
+    }
+
+
+    /* ----- Content Ayat ----- */
+    .ayatku .contentAyat .headerSubAyat .headerSubContent{ 
+        width: 60%;
+    }
+
+    .ayatku .contentAyat .subAyat .spaceContent {
+        width: 80%;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media only screen and (max-width: 600px) { 
+    .ayatku .headerAyat .logoAyat {
+        display: none;
+    }
+
+    .ayatku .headerAyat .headerContent {
+       width: 70%;
+    }
+
+    .ayatku .btnBack {
+        left: 5px;
+    }
+    .ayatku .btnBack button {
+        padding: 5px 12px;
+    }
+    .ayatku .btnBack .back1 {
+        display: none;
+    }
+    .ayatku .btnBack .back2 {
+        display: block;
+    }
+    
+    
+    /* ----- Content Ayat ----- */
+    .ayatku .contentAyat .headerSubAyat .headerSubContent{ 
+        width: 95%;
+    }
+
+    .ayatku .contentAyat .headerKota,
+    .ayatku .contentAyat .headerJuz{
+        padding-top: 5px;
+    }
+    .ayatku .contentAyat .headerArab {
+        padding: 5px 20px 0px 20px;
+    }
+
+    .ayatku .contentAyat .headerKota h3,
+    .ayatku .contentAyat .headerJuz h3{
+        font-size: 20px;
+    }
+
+    .ayatku .contentAyat .subAyat .spaceContent {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .ayatku .contentAyat .subAyat .mainContent{
+        padding: 0px 0px 20px 0px;
+    } 
+
+    .mainContent .contentTop .contentArab { 
+        padding-left: 20px;
+    }
+
+
+    /* ----- Footer ----- */
+    .footerAyat {
+        width: 100%;
+        height: 110px;
+        position: relative;
+        background-color: #3D1D00;
+        display: block;
+        color: rgba(200, 151, 38, 0.7);
+        padding: 5px 20px 0px 20px;
+    }
+    .footerAyat p {
+        font-size: 15px;
+        line-height: 10px;
+        margin-top: 17px;
+    }
+    .footerAyat .copyright {
+        font-size: 17px;
+        font-weight: 600;
+        color: #C89726;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(0% -50%);
+    }
+    .footerAyat a {
+        font-weight: 600;
+        color: #C89726;
+    }
+}

@@ -1,0 +1,422 @@
+/* ----- Surahku Section ----- */
+.surahku {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF8DB;
+}
+
+
+
+/* ----- Header ----- */
+.surahku .searchbar {
+    width: 100%;
+}
+
+.surahku .logoSurah {
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    z-index: 15;
+}
+.surahku .logoSurah img {
+    width: 70px;  
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.surahku .searchbar .content {
+    width: 100%;
+    height: auto;
+    padding: 5px 0px;
+    background-color: #3D1D00;
+    text-align: center;
+    position: relative;
+    z-index: 12;
+}
+
+/* Search Frame */
+.surahku .searchbar .content img{ 
+    width: 50%;
+    height: 60px;
+} 
+
+/* Searchbar */
+.surahku .searchbar input {
+    width: 38%;
+    height: 36px;
+    background-color: transparent;
+    border: 3px solid #C89726;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 30;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -53px;
+    color: #C89726;
+}
+.surahku .searchbar input::placeholder { 
+    color: rgba(200, 151, 38, 0.7);
+}
+.surahku .searchbar input:focus {
+    outline: 2px solid #FFDC8A;
+}
+
+/* Header Frame */
+.surahku .searchbar .frameh {
+    width: 100%;
+    margin-top: -2px;
+    filter: drop-shadow(0px 5px 5px #C89726);
+}
+
+
+
+/* ----- Content ----- */
+.surahku .contentSurah {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    top: 100vh;
+    padding: 71px 0px 22px 0px;
+    /* background-color: rgba(255, 0, 0, 0.377); */
+}
+
+.surahku .contentSurah .subContent { 
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 35vh 50px;
+    overflow-y: auto;
+    /* background-color: blue; */
+}
+.surahku .contentSurah .subContent::before {
+    content: ' ';
+    width: 50%;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 71px;
+    background-image: linear-gradient(to bottom, #FFF8DB, transparent);
+    position: absolute;
+    z-index: 7;
+}
+.surahku .contentSurah .subContent::after {
+    content: ' ';
+    width: 50%;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 22px;
+    background-image: linear-gradient(to bottom, transparent, #FFF8DB);
+    position: absolute;
+    z-index: 7;
+}
+.surahku .contentSurah .subContent::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+
+/* ----- Surah ----- */
+.subContent .outer {
+    width: 100%;
+    height: auto;
+    background-color: #3D1D00;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    margin: 25px 0px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.subContent .outer .inner {
+    width: 70%;
+    height: auto;
+    margin: 0 10px;
+}
+
+.subContent .outer .inner a {
+    width: 100%;
+}
+
+.subContent .outer .inner .inner1 { 
+    width: 100%;
+    height: 65px;
+    background-color: #FFDC8A;
+    border-radius: 50px;
+}
+.subContent .outer .inner .inner1 h4{ 
+    font-weight: 600;
+    letter-spacing: .5px;
+} 
+
+/* Circle Decoration */
+.subContent .outer .circle {
+    width: 25px;
+    height: 25px;
+    border: 4px solid #C89726;
+    border-radius: 50%;
+}
+.subContent .outer .circle2 {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #C89726;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+
+/* ----- Hover Effect ----- */
+.subContent .outer:hover {
+    transform: scale(1.09);
+}
+
+
+/* ----- Footer ----- */
+.surahku .footer {
+    width: 100%;
+    position: absolute;
+    bottom: -100vh;
+}
+
+/* Footer Frame */
+.surahku .footer img {
+    width: 100%;
+    margin-bottom: -2px;
+    filter: drop-shadow(0px -5px 5px #C89726);
+}
+
+.surahku .footerb {
+    width: 100%;
+    height: 20px;
+    background-color: #3D1D00;
+    position: relative;
+    z-index: 3;
+}
+.surahku .footerb p {
+    position: absolute;
+    color: #C89726;
+    bottom: 0;
+    right: 20px;
+}
+
+
+/* ----- Loading ----- */
+.subContent .loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #3D1D00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subContent .loading .loadingContent {
+    width: 300px;
+    height: auto;
+    text-align: center;
+}
+.subContent .loading .loadingContent img {
+    width: 100%;
+    animation: imgOpacity 1.5s linear alternate infinite;
+}
+@keyframes imgOpacity {
+    0% {opacity: .4;}
+    100% {opacity: 1;}
+}
+.subContent .loading .loadingContent h4 {
+    color: #FFF8DB;
+    letter-spacing: .5px;
+}
+.subContent .loading .loadingContent h4 span {
+    position: relative;
+}
+.subContent .loading .loadingContent h4 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3D1D00;
+    animation: typing 1.5s steps(4) infinite;
+}
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin-left: 5px;
+    }
+}
+
+
+
+/* ---------- Tablet ---------- */
+
+@media only screen and (max-width: 900px) { 
+    /* ----- Content ----- */
+    .surahku .contentSurah {
+        top: 100vh;
+        padding: 200px 100px 150px 100px;
+    }
+
+    .surahku .contentSurah .subContent { 
+        width: 100%;
+        padding: 25vh 50px;
+    }
+    .surahku .contentSurah .subContent::before {
+        width: 100%;
+        height: 50px;
+        top: 198px;
+    }
+    .surahku .contentSurah .subContent::after {
+        width: 100%;
+        height: 50px;
+        bottom: 148px;
+    }
+
+
+    /* Button to Ayat */
+    .subContent .outer .inner .inner2 {
+        display: block;
+        margin-top: 5px;
+    }
+
+
+    /* ----- Hover Effect ----- */
+    .subContent .outer:hover {
+        transform: scale(1.0);
+    }
+
+
+    /* ----- Footer ----- */
+    .surahku .footerb {
+        height: 30px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media only screen and (max-width: 600px) { 
+    /* ----- Header ----- */
+    .surahku .logoSurah { 
+        display: none;
+    }
+
+    .surahku .searchbar .content {
+        padding: 8px 0px 2px 0px;
+    }
+    /* Search Frame */
+    .surahku .searchbar .content img{ 
+        width: 80%;
+        height: 50px;
+    } 
+
+    /* Searchbar */
+    .surahku .searchbar input {
+        width: 60%;
+        height: 30px;
+        margin-top: -42px;
+        font-size: 14px;
+    }
+
+    /* Header Frame */
+    .surahku .searchbar .frameh {
+        height: 60px;
+        position: relative;
+        z-index: 10;
+    }
+
+
+    /* ----- Content ----- */
+    .surahku .contentSurah {
+        top: 100vh;
+        padding: 60px 0px 30px 0px;
+        /* background-color: red; */
+    }
+
+    .surahku .contentSurah .subContent { 
+        width: 100%;
+        padding: 25vh 20px;
+    }
+    .surahku .contentSurah .subContent::before {
+        width: 100%;
+        height: 80px;
+        top: 60px;
+    }
+    .surahku .contentSurah .subContent::after {
+        width: 100%;
+        height: 80px;
+        bottom: 30px;
+    }
+
+
+    /* ----- Surah ----- */
+    .subContent .outer .inner {
+        width: 90%;
+        margin: 0 5px;
+    }
+
+    .subContent .outer .inner .inner1 { 
+        width: 100%;
+        height: 52px;
+    }
+
+    .subContent .outer .inner h4 {
+        font-size: 20px;
+    }
+
+    .subContent .outer .inner .detail1 {
+        font-size: 12px;
+    }
+
+
+    /* Button to Ayat */
+    .subContent .outer .inner .inner2 {
+        display: block;
+        margin-top: 5px;
+    }
+    .subContent .outer .inner .inner2 button{ 
+        font-size: 15px;
+    }
+
+
+    /* Circle Decoration */
+    .subContent .outer .circle,
+    .subContent .outer .circle2 {
+        display: none;
+    }
+
+
+    /* ----- Hover Effect ----- */
+    .subContent .outer:hover .inner .inner1 {
+        height: 52px;
+    }
+
+    /* ----- Footer ----- */
+    .surahku .footer {
+        position: sticky;
+        z-index: 20;
+        margin-top: calc(100vh - 200px);
+    }
+    .surahku .footer img {
+        height: 60px;
+        position: relative;
+        z-index: 10;
+    }
+    .surahku .footerb {
+        position: relative;
+        z-index: 11;
+    }
+    .surahku .footerb p {
+        font-size: 12px;
+        bottom: -10px;
+        right: 10px;
+    }
+}
